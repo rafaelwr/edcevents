@@ -1,27 +1,21 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.main')
 
-        <title>Laravel</title>
+@section('title', 'HDC Events')
 
-        <link rel="stylesheet" href="/css/styles.css">
-        <script src="/js/scripts.js"></script>
-    </head>
-    <body>
-        <h1>Teste</h1>
+@section('content')
 
-        <img src="/img/banner.jpg" alt="Banner">
+<h1>Teste</h1>
 
-        <p>O nome é {{ $nome }} e a profissão é {{ $profissao }}.</p>
+<img src="/img/banner.jpg" alt="Banner">
 
-        <p>
-            @if($idade >= 18)
-                É maior de idade.
-            @else
-                É menor de idade.
-            @endif
-        </p>
-    </body>
-</html>
+<p>O nome é {{ $nome }} e a profissão é {{ $profissao }}.</p>
+
+<p>
+    @if($idade >= 18)
+        É maior de idade.
+    @else
+        É menor de idade.
+    @endif
+</p>
+
+@endsection
